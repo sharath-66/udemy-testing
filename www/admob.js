@@ -36,11 +36,12 @@ function initAd() {
   AdMob.setOptions(defaultOptions);
 
   registerAdEvents();
+  //Set autoShow to true if u want to prepare and show the ads as soon as page loads
   AdMob.prepareInterstitial({ adId: admobid.interstitial, autoShow: false });
   AdMob.createBanner({
     adId: admobid.banner,
     position: AdMob.AD_POSITION.BOTTOM_CENTER,
-    autoShow: true
+    autoShow: false
   });
   AdMob.prepareRewardVideoAd({
     adId: admobid.rewardvideo,
@@ -79,6 +80,7 @@ function registerAdEvents() {
   });
 }
 
+//set autoShow to true if u want to show ads as soon as the page is ready
 function prepareAd(type) {
   if (type === 'interstitial') {
     AdMob.prepareInterstitial({
