@@ -40,7 +40,7 @@ function initAd() {
   AdMob.createBanner({
     adId: admobid.banner,
     position: AdMob.AD_POSITION.BOTTOM_CENTER,
-    autoShow: false
+    autoShow: true
   });
   AdMob.prepareRewardVideoAd({
     adId: admobid.rewardvideo,
